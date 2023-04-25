@@ -4,11 +4,21 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wel Come To Line Comparision Problem");
+            Console.WriteLine("\nWel Come To Line Comparision Problem\n");
 
-            LineComparision lineComparision = new LineComparision(15, 24, 17, 8);
-            lineComparision.CompareTwoLines();
+            LineComparision lineOne = new LineComparision(15, 24, 17, 8);
+            double lineLengthOne = lineOne.CompareTwoLines();
+
+            LineComparision lineTwo = new LineComparision(25, 3, 15, 21);
+            double lineLengthTwo = lineTwo.CompareTwoLines();
+
+            
+            if (lineLengthOne.Equals(lineLengthTwo))
+            { Console.WriteLine("Both lines are equal"); }
+            else
+            { Console.WriteLine("Both lines are unequal"); }
             Console.ReadKey();
+          
         }
     }
 }
